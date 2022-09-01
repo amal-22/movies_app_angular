@@ -1,0 +1,87 @@
+<section class="pt-5 pb-4">
+  <div class="container">
+    <div class="m-4">
+      <div class="row">
+        <div class="col-5">
+          <p>Filter by rating</p>
+          <select class="form-control" (change)=filterByRating($event)>
+            <option value="all">All</option>
+            <option value="below">Below 5</option>
+            <option value="5">5+</option>
+            <option value="6">6+</option>
+            <option value="7">7+</option>
+            <option value="8">8+</option>
+            <option value="9">9+</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <p>Filter by year</p>
+          <div class="d-flex">
+            <input class="form-control small" [(ngModel)]='year' />
+            <button class="btn btn-primary btn-sm m-1" (click)="filterByYear()">find</button>
+          </div>
+          <p class="text-danger">{{error}}</p>
+        </div>
+        <div class="col-3">
+          <p>Sort by</p>
+          <select class="form-control" (change)=sortBy($event)>
+            <option value="all">All</option>
+            <option value="asc">Ascending</option>
+            <option value="dsc">Descending</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row rest-listing-row" *ngIf="movieData && movieData.length; else emptyBlock">
+      <div class="col-md-4 col-sm-6" *ngFor="let movie of movieData">
+        <div class="card flag-card p-3">
+          <div class="card-body" (click)="movieDetails(movie)">
+            <div class="flag-image"
+              style="background-image: url(https://image.tmdb.org/t/p/w500/{{movie.backdrop_path}})">
+            </div>
+            <h5 class="card-title mt-2">{{movie.title}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #emptyBlock>
+      <h4 class="mb-3">Sorry! We couldn't find any results.</h4>
+    </ng-template>
+  </div>
+</section>
+
+<div class="modal modal-lg fade" id="movieModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">{{selectedMovie?.original_title}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+          (click)="closeMovieModal()"></button>
+      </div>
+      <div class="modal-body mx-auto">
+        <div class="card mb-3">
+          <div class="row g-0">
+            <div class="col-md-4" *ngIf="selectedMovie?.backdrop_path">
+              <img src="https://image.tmdb.org/t/p/w500/{{selectedMovie?.backdrop_path}}"
+                class="img-fluid rounded-start" alt="">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title" *ngIf="selectedMovie?.vote_average">Rating : {{selectedMovie?.vote_average}}</h5>
+                <p class="card-text" *ngIf="selectedMovie?.overview">{{selectedMovie?.overview}}</p>
+                <div class="d-flex flex-wrap">
+                  <p class="card-text" *ngIf="selectedMovie?.release_date"><small class="text-muted">Release date :
+                      {{selectedMovie?.release_date}}</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="closeMovieModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

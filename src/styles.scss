@@ -1,0 +1,282 @@
+.cursor_pointer {
+    cursor: pointer;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  
+  .input {
+    border: none;
+  }
+  .input:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
+  
+  button {
+    border: none;
+  }
+  button:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
+  
+  .card {
+    border: 1px solid #ebebeb;
+  }
+  
+  .mt-30 {
+    margin-top: 30px !important;
+  }
+  
+  .py-60 {
+    padding: 60px 0 !important;
+  }
+  
+  .py-80 {
+    padding: 80px 0 !important;
+  }
+  
+  .btn {
+    padding: 6px 20px;
+    border-radius: 3px;
+  }
+  
+  .btn-sm {
+    padding: 2px 10px;
+    border-radius: 3px;
+  }
+  
+  header {
+    background: #fff;
+    border-bottom: 1px solid #cec7c7;
+  }
+  header .navbar {
+    background: #ffffff;
+  }
+  @media (max-width: 575px) {
+    header .navbar {
+      padding: 0px;
+    }
+  }
+  header .navbar .nav-item .nav-link {
+    padding: 8px 20px !important;
+    color: #696969 !important;
+  }
+  @media (max-width: 991px) {
+    header .navbar .nav-item .nav-link {
+      padding: 8px 0px !important;
+    }
+  }
+  header .navbar .nav-item .nav-link:focus,
+  header .navbar .nav-item .nav-link.focus {
+    box-shadow: none;
+  }
+  header .navbar .nav-item .nav-link:hover {
+    color: #d43f3a !important;
+  }
+  header .navbar .nav-item.active .nav-link {
+    color: #d43f3a !important;
+  }
+  header .navbar .btn-outline-primary {
+    border-radius: 25px;
+    display: inline-block;
+  }
+  header .navbar .btn-outline-primary:hover {
+    color: #fff !important;
+  }
+  header .navbar .btn-outline-primary:focus,
+  header .navbar .btn-outline-primary.focus,
+  header .navbar .btn-outline-primary:active {
+    box-shadow: none !important;
+  }
+  @media (max-width: 991px) {
+    header .navbar .btn-outline-primary {
+      padding: 8px 20px !important;
+      margin-top: 10px;
+    }
+  }
+  header .navbar .navbar-brand img {
+    max-height: 30px;
+  }
+  header .navbar .navbar-toggler {
+    border: none;
+    padding: 4px 0px;
+  }
+  
+  #navbar_top {
+    background: #fff;
+  }
+  
+  footer{
+    background: #fff;
+  }
+  
+  .fixed-top {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    border-bottom: 1px solid #ebebeb !important;
+  }
+  @media (max-width: 576px) {
+    .fixed-top {
+      padding-right: 15px !important;
+      padding-left: 15px !important;
+    }
+  }
+  
+  .flag-card {
+    margin-bottom: 16px;
+    border: none;
+  }
+  .flag-card .rest-img img {
+    border-radius: 4px;
+  }
+  .flag-card .flag-image {
+    border-radius: 4px;
+    width: 100%;
+    min-width: 110px;
+    min-height: 230px;
+    align-items: center;
+    display: flex;
+    background: #f4f4f4;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 4px;
+    border: 2px solid #000 !important;
+  }
+  @media (max-width: 576px) {
+    .flag-card .flag-image {
+      min-height: 180px;
+      border: 2px solid #000 !important;
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 1200px) {
+    .flag-card .flag-image {
+      min-height: 150px !important;
+      border: 2px solid #000 !important;
+    }
+  }
+  
+  .flag-image:hover{
+    transform: scale(1.02) !important;
+    cursor: pointer !important;
+  }
+  .flag-card .card-body {
+    padding: 15px 0;
+  }
+  .flag-card .card-body .card-title {
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: #362725;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .flag-card .card-body .location {
+    margin-right: 12px;
+    color: #696969;
+    font-size: 14px;
+    margin-bottom: 0px;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .flag-card .card-body .cuisines {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .flag-card .card-body .cuisines span {
+    margin-right: 6px;
+    color: #696969;
+    font-size: 14px;
+    display: inline-block;
+  }
+  .flag-card .card-body .cuisines span::before {
+    display: inline-block;
+    content: "";
+    border-radius: 0.375rem;
+    height: 5px;
+    width: 5px;
+    margin-right: 6px;
+    background-color: #696969;
+    margin-bottom: 2px;
+  }
+  .flag-card .card-body .badge {
+    background-color: #f4f4f4;
+    padding: 8px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-right: 5px;
+    color: #362725;
+  }
+  @media (max-width: 575px) {
+    .flag-card {
+      display: flex;
+    }
+    .flag-card .rest-img {
+      max-width: 100px;
+      margin-right: 15px;
+      flex: 0 0 100px;
+    }
+    .flag-card .card-body .card-title {
+      margin-bottom: 0px;
+    }
+    .flag-card .card-body .cuisines {
+      width: 220px;
+    }
+    .flag-card .card-body .location {
+      display: none;
+    }
+    .flag-card .card-body .badge {
+      padding: 0.25em 0.4em;
+    }
+  }
+  
+  .log-reg-sec .content {
+    max-width: 460px;
+    margin: 0 auto;
+    margin: 80px auto;
+    padding: 0 16px;
+  }
+  .log-reg-sec .content .form-logo {
+    max-width: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: block;
+    border-radius: 100px;
+  }
+  
+  .log-reg-sec .content .form-content {
+    box-sizing: border-box;
+  }
+  .log-reg-sec .content .form-content h1 {
+    font-size: 22px;
+    color: #362725;
+    font-weight: 600;
+    margin: 0 0 20px;
+  }
+  .log-reg-sec .content .form-content a,
+  .log-reg-sec .content .form-content span {
+    font-size: 13px;
+  }
+  .log-reg-sec .content .form-content .email-text {
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 15px;
+    display: block;
+  }
